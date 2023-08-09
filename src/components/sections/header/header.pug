@@ -1,0 +1,41 @@
+header.header
+  .logo
+    a(href="index.html")
+      img(src="assets/img/logo.png" width="127" height="40" alt="Лого" loading="lazy")
+  a(href="+74956203537").phone +7 (495) 620-35-37
+  img(src="assets/img/icons/user.svg" width="24" height="24" alt="" loading="lazy").user-icon
+  include ../../bem-blocks/burger/burger.pug
+  ul.nav(role="menu")
+    li(role="menuitem").menuitem
+      a(href="#main") Главная
+    li(role="menuitem").menuitem.menuitem--active
+      a(href="#about") О нас
+    li(role="menuitem").menuitem
+      a(href="#services") Услуги и цены
+    li(role="menuitem").menuitem
+      a(href="#gallery") Галерея
+    li(role="menuitem").menuitem
+      a(href="#actions") Акции
+    li(role="menuitem").menuitem
+      a(href="#contacts") Контакты
+    .nav-bottom
+      p Технический центр НИВЮС расположен по адресу:
+      ul
+        li г. Москва, ул. Автозаводская, д. 16, к. 2, стр. 16г. 
+        li г. Москва, ул. Автозаводская, д. 16, к. 2, стр. 16г. 
+      .contacts-wrap
+        .phone-block 
+          p Телефон
+          ul 
+            li +7 (495) 132-13-22
+            li +7 (495) 106-39-30
+            li +7 (495) 620-35-37
+        .email-block 
+          p E-mail
+          ul 
+            li info@nivus.ru
+            li dmitrovka@nivus.ru
+      p.time Ежедневно: с 8:00 до 21:00 
+      button.btn.btn--long.btn--mobile Обратный звонок
+      button.btn.btn--long.btn--transparent.btn--mobile Задать вопрос
+  button.btn.btn--long Войти

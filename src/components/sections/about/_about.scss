@@ -1,0 +1,161 @@
+.about {
+  border-radius: 2.5rem 2.5rem 0 0;
+  background: #FFF;
+  margin-top: -3rem;
+  z-index: 10;
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__text {
+    margin: 2.5rem 0 5rem 0;
+    color: #4F4F4F;
+    @include GilroyMedium();
+    font-size: 1.4rem;
+    line-height: normal;
+
+    @media (min-width: 430px) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 2rem;
+      margin: 2.5rem 0 10rem 0;
+    }
+  }
+
+  .road-map {
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 4rem 1rem 5rem 1rem;
+
+      @media (min-width: 900px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 1rem 8rem 1rem;
+      }
+
+      @media (min-width: 1400px) {
+        padding: 4rem 1rem 14rem 1rem;
+      }
+
+      &:last-of-type {
+        padding-bottom: 10rem;
+
+        @media (min-width: 900px) {
+          padding-bottom: 4rem;
+        }
+  
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -1.5rem;
+        // transform: translateX(-50%);
+        width: 0.5rem;
+        height: 100%;
+        background: #C63235;
+
+        @media (min-width: 900px) {
+          left: unset;
+          right: 50%;
+        }
+      }
+    }
+
+    &__title {
+      width: 100%;
+      max-width: 60rem;
+      margin-bottom: 0.5rem;
+      margin-top: 7.5rem;
+      color: #333;
+      @include GilroyBold();
+      font-size: 1.4rem;
+      line-height: normal;
+
+      @media (min-width: 430px) {
+        font-size: 1.6rem;
+      }
+
+      @media (min-width: 900px) {
+        font-size: 2rem;
+        width: 40%;
+        text-align: right;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      @media (min-width: 1400px) {
+        font-size: 3.2rem;
+        width: 50%;
+        // text-align: right;
+        // margin-bottom: 0;
+        // margin-top: 0;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      max-width: 60rem;
+      color: #4F4F4F;
+      @include GilroyBold();
+      font-size: 1.2rem;
+      line-height: normal;
+
+      @media (min-width: 900px) {
+        font-size: 1.6rem;
+        width: 40%;
+      }
+
+      @media (min-width: 1400px) {
+        font-size: 2rem;
+        width: 50%;
+      }
+
+      ul {
+        list-style: disc;
+        margin-left: 3rem;
+      }
+    }
+
+    &__year {
+      position: absolute;
+      z-index: 10;
+      color: #FFF;
+      text-align: center;
+      @include GilroyBold();
+      font-size: 3.2rem;
+      line-height: normal;
+      background: #C63235;
+      border-radius: 2.5rem;
+      padding: 0.5rem 2.75rem;
+      left: 3.1rem;
+      transform: translateX(-50%);
+
+      @media (min-width: 900px) {
+        left: 49.7%;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    left: -2rem;
+
+    @media (min-width: 500px) {
+      left: -3rem;
+    }
+
+    @media (min-width: 900px) {
+      margin: 0 auto 10rem auto;
+      left: unset;
+    }
+  }
+}
+

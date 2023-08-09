@@ -1,0 +1,16 @@
+.btn {
+  outline: none;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  @include GilroySemiBold();
+  font-size: 1.6rem;
+  line-height: normal;
+  background: #C63235;
+  border-radius: 0.5rem;
+
+  &--long {
+    padding: 1rem 3.8rem;
+  }
+}
+

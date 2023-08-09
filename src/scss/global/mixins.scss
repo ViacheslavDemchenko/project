@@ -1,0 +1,24 @@
+/* FONTS */
+
+/* Gilroy */
+
+@mixin GilroyMedium ($font-family: 'Gilroy Medium', $font-weight: 500, $font-style: normal, $font-display: swap) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-display: $font-display;
+}
+
+@mixin GilroySemiBold ($font-family: 'Gilroy SemiBold', $font-weight: 600, $font-style: normal, $font-display: swap) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-display: $font-display;
+}
+
+@mixin GilroyBold ($font-family: 'Gilroy Bold', $font-weight: 700, $font-style: normal, $font-display: swap) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-display: $font-display;
+}

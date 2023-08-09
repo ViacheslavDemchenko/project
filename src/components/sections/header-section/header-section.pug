@@ -1,0 +1,30 @@
+.header-section
+  include ../header/header.pug
+  .swiper.slider-main
+    .swiper-wrapper
+      .swiper-slide
+        img(src="assets/img/main-bg.jpg" width="1920" height="850" alt="" loading="lazy")
+      .swiper-slide 
+        img(src="assets/img/main-bg.jpg" width="1920" height="850" alt="" loading="lazy")
+      .swiper-slide 
+        img(src="assets/img/main-bg.jpg" width="1920" height="850" alt="" loading="lazy")
+    .swiper-pagination
+    .container.container--main
+      .header-section__content 
+        h1.header-section__title Все виды услуг
+        p.header-section__subtitle Мы выполняем полный спектр услуг, будь то простое обслуживание автомобиля, до сложного ремонта всех узлов.
+        .header-section__menu
+          .header-section__menu-item 
+            p.menu-item__title  Выберите адрес
+            p.menu-item__info  ул. Автозаводская, д. 16
+          .header-section__menu-item 
+            p.menu-item__title  Выберите дату
+            p.menu-item__info Четверг 19
+          .header-section__menu-item 
+            p.menu-item__title  Выберите время
+            p.menu-item__info 12:00
+          .header-section__menu-item
+            form.header-section__form
+              input(type="text" name="header-form" placeholder="Укажите номер телефона")
+              button.btn.btn--long Записаться
+        button.btn.btn--long.btn--long-mobile Записаться

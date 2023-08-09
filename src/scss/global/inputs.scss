@@ -1,0 +1,11 @@
+input {
+  border: none;
+
+  &::placeholder {
+    color: #828282;
+    text-align: center;
+    @include GilroyMedium();
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+}
