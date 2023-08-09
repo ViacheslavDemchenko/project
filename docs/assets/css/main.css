@@ -219,6 +219,9 @@ input::placeholder {
   backdrop-filter: blur(7.5px);
   width: 100vw;
   padding: 5rem 2rem 8.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-bottom ul {
@@ -266,6 +269,7 @@ input::placeholder {
   font-display: swap;
   font-size: 1.2rem;
   line-height: normal;
+  margin-right: 5rem;
 }
 
 .nav-bottom .contacts-wrap .email-block {
@@ -317,7 +321,7 @@ input::placeholder {
   width: 100vw;
   position: absolute;
   top: 4.8rem;
-  left: -100%;
+  left: -200%;
   background: #fff;
   padding-top: 3rem;
   transition: left 0.5s linear;
@@ -436,8 +440,6 @@ input::placeholder {
 }
 
 .cmn-toggle-switch__htx.active {
-  position: absolute;
-  z-index: 8000;
   width: 2.4rem;
   height: 2rem;
 }
@@ -450,18 +452,21 @@ input::placeholder {
 
 .cmn-toggle-switch__htx.active span::before,
 .cmn-toggle-switch__htx.active span::after {
-  background: #333333;
+  background: #C63235;
   transition-delay: 0.3s;
+  width: 1.6rem;
 }
 
 .cmn-toggle-switch__htx.active span::before {
   top: 0;
   transform: rotate(45deg);
+  left: 0.7rem;
 }
 
 .cmn-toggle-switch__htx.active span::after {
   bottom: 0;
   transform: rotate(-45deg);
+  right: 0.7rem;
 }
 
 .header-section {
@@ -529,6 +534,7 @@ input::placeholder {
   font-size: 2rem;
   line-height: normal;
   position: relative;
+  cursor: pointer;
 }
 
 .header-section .menu-item__title::after {
@@ -566,7 +572,7 @@ input::placeholder {
 
 .header-section .swiper.slider-main .swiper-pagination {
   position: absolute;
-  z-index: 30;
+  z-index: 20;
   left: 50%;
   transform: translateX(-50%);
   bottom: 6rem;
@@ -870,6 +876,7 @@ input::placeholder {
 
   .nav-bottom .contacts-wrap .phone-block {
     font-size: 1.4rem;
+    margin-right: 7rem;
   }
 
   .nav-bottom .contacts-wrap .email-block {
@@ -884,18 +891,6 @@ input::placeholder {
     width: 10rem;
     height: 3.2rem;
     margin-right: 4.2rem;
-  }
-
-  .logo::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 0.1rem;
-    height: 3rem;
-    right: -4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #828282;
   }
 
   .header-section__title {
@@ -947,9 +942,7 @@ input::placeholder {
 
 @media (min-width: 768px) {
   .header {
-    max-width: 95%;
     padding: 1.5rem;
-    border-radius: 2.5rem;
   }
 
   .header-section__content {
@@ -1009,10 +1002,6 @@ input::placeholder {
     padding-right: 1.7rem;
   }
 
-  .header {
-    top: 1.5rem;
-  }
-
   .logo {
     width: 12.7rem;
     height: 4rem;
@@ -1035,6 +1024,10 @@ input::placeholder {
 
   .header-section .swiper.slider-main {
     height: 65rem;
+  }
+
+  .header-section .swiper.slider-main .swiper-pagination {
+    bottom: 11rem;
   }
 
   .header-section .swiper-slide {
@@ -1067,6 +1060,12 @@ input::placeholder {
 }
 
 @media (min-width: 1200px) {
+  .header {
+    max-width: 95%;
+    border-radius: 2.5rem;
+    top: 1.5rem;
+  }
+
   .header .user-icon {
     display: none;
     margin-right: 0;
@@ -1082,11 +1081,37 @@ input::placeholder {
     margin-left: unset;
   }
 
+  .nav-bottom {
+    display: none;
+  }
+
   .nav {
+    position: static;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     margin: 0 5.7rem 0 8rem;
+    left: 0;
+    background: none;
+    max-width: 52rem;
+    padding-top: 0;
+  }
+
+  .nav .menuitem {
+    margin-bottom: 0;
+  }
+
+  .logo::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.1rem;
+    height: 3rem;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #828282;
   }
 
   .cmn-toggle-switch {
@@ -1105,6 +1130,10 @@ input::placeholder {
     height: 75rem;
   }
 
+  .header-section .swiper.slider-main .swiper-pagination {
+    bottom: 13rem;
+  }
+
   .header-section .swiper-slide {
     height: 75rem;
   }
@@ -1116,15 +1145,11 @@ input::placeholder {
   }
 
   .nav {
-    margin: 0 17.7rem 0 10rem;
+    margin: 0 9.7rem 0 14rem;
   }
 
-  .nav .menuitem {
-    margin-bottom: 0;
-  }
-
-  .nav .menuitem:not(:last-of-type) {
-    margin-right: 3rem;
+  .logo::after {
+    right: -3rem;
   }
 
   .header-section {
@@ -1154,6 +1179,10 @@ input::placeholder {
 
   .header-section .swiper.slider-main {
     height: 85rem;
+  }
+
+  .header-section .swiper.slider-main .swiper-pagination {
+    bottom: 6rem;
   }
 
   .header-section .swiper-slide {

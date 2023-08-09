@@ -117,6 +117,7 @@
     font-size: 2rem;
     line-height: normal;
     position: relative;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -268,11 +269,23 @@
 
     .swiper-pagination {
       position: absolute;
-      z-index: 30;
+      z-index: 20;
       left: 50%;
       transform: translateX(-50%);
       bottom: 6rem;
       display: flex;
+
+      @media (min-width: 1024px) {
+        bottom: 11rem;
+      }
+
+      @media (min-width: 1200px) {
+        bottom: 13rem;
+      }
+
+      @media (min-width: 1400px) {
+        bottom: 6rem;
+      }
     }
 
     .swiper-pagination-bullet {

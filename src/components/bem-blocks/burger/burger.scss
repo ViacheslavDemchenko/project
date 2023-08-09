@@ -94,8 +94,8 @@
 }
    
 .cmn-toggle-switch__htx.active {
-    position: absolute;
-    z-index: 8000;
+    // position: absolute;
+    // z-index: 8000;
     width: 2.4rem;
     height: 2rem;
 
@@ -106,18 +106,21 @@
   
         &::before,
         &::after {
-            background: #333333;
+            background: #C63235;
             transition-delay: .3s;
+            width: 1.6rem;
         }
   
         &::before {
             top: 0;
             transform: rotate(45deg);
+            left: 0.7rem;
         }
   
         &::after {
             bottom: 0;
             transform: rotate(-45deg);
+            right: 0.7rem;
         }
     }
 }
