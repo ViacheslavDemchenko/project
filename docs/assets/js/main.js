@@ -351,19 +351,20 @@ if (window && window.NodeList && !NodeList.prototype.forEach) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/mobileMenu */ "./src/js/modules/mobileMenu.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
+/* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dropdown */ "./src/js/modules/dropdown.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
 __webpack_require__(/*! polyfill-nodelist-foreach */ "./node_modules/polyfill-nodelist-foreach/index.js"); // Полифил для поддержки метода forEach в IE11+ и Safari9
 __webpack_require__(/*! svgxuse */ "./node_modules/svgxuse/svgxuse.js"); // Полифил для поддержки IE11+ и старыми браузерами использования SVG через use 
 
 // import accordion from './modules/accordion.js'; // Аккордион
  // Мобильное меню
-// import modal from './modules/modal'; // Модалки
+
  // Слайдер
 
 // accordion();
 Object(_modules_mobileMenu__WEBPACK_IMPORTED_MODULE_0__["default"])();
-// modal();
-Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
+Object(_modules_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"])();
+Object(_modules_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
 /***/ }),
 
@@ -4665,6 +4666,95 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _type
     }];
   return R.use(ce), R;
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/dropdown.js":
+/*!************************************!*\
+  !*** ./src/js/modules/dropdown.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return dropdown; });
+function dropdown() {
+  if (document.querySelector('.header-section__menu')) {
+    document.querySelectorAll('.select').forEach(function (selectElement) {
+      var selectOption = selectElement.querySelectorAll('option');
+      var selectOptionLength = selectOption.length;
+      var selectedOption = Array.from(selectOption).find(function (option) {
+        return option.selected;
+      });
+      var duration = 450;
+      selectElement.style.display = 'none';
+      var selectWrapper = document.createElement('div');
+      selectWrapper.classList.add('select');
+      selectElement.parentNode.insertBefore(selectWrapper, selectElement);
+      var newSelect = document.createElement('div');
+      newSelect.classList.add('new-select');
+      newSelect.textContent = Array.from(selectElement.querySelectorAll('option:disabled')).map(function (option) {
+        return option.textContent;
+      }).join(' ');
+      selectWrapper.appendChild(selectElement);
+      selectWrapper.appendChild(newSelect);
+      var selectHead = selectElement.nextElementSibling;
+      var selectList = document.createElement('div');
+      selectList.classList.add('new-select__list');
+      selectHead.parentNode.insertBefore(selectList, selectHead);
+      for (var i = 1; i < selectOptionLength; i++) {
+        var newItem = document.createElement('div');
+        newItem.classList.add('new-select__item');
+        var newSpan = document.createElement('span');
+        newSpan.textContent = selectOption[i].textContent;
+        newItem.appendChild(newSpan);
+        newItem.setAttribute('data-value', selectOption[i].value);
+        selectList.appendChild(newItem);
+        newItem.addEventListener('click', function () {
+          var chooseItem = this.getAttribute('data-value');
+          selectElement.value = chooseItem;
+          selectHead.textContent = this.querySelector('span').textContent;
+          selectList.style.display = 'none';
+          selectHead.classList.remove('on');
+        });
+      }
+      var selectItem = selectList.querySelectorAll('.new-select__item');
+      selectList.style.display = 'none';
+      selectHead.addEventListener('click', function (e) {
+        console.log(e.target.parentNode.parentNode);
+        e.target.parentNode.parentNode.querySelector('.menu-item__title').classList.toggle('on');
+        if (!this.classList.contains('on')) {
+          this.classList.add('on');
+          selectList.style.display = 'block';
+          selectItem.forEach(function (item) {
+            item.addEventListener('click', function () {
+              var chooseItem = this.getAttribute('data-value');
+              selectElement.value = chooseItem;
+              selectHead.textContent = this.querySelector('span').textContent;
+              selectList.style.display = 'none';
+              selectHead.classList.remove('on');
+            });
+          });
+        } else {
+          this.classList.remove('on');
+          selectList.style.display = 'none';
+        }
+      });
+    });
+
+    // const menuItems = document.querySelectorAll('.menu-item__title');
+    // const selectList = document.querySelector('.new-select__list');
+    // const newSelect = document.querySelector('.new-select');
+
+    // menuItems.forEach(item => {
+    //   item.addEventListener('click', function() {
+    //     selectList.style.display = 'block';
+    //     newSelect.classList.add('on');
+    //   });
+    // });
+  }
+}
 
 /***/ }),
 

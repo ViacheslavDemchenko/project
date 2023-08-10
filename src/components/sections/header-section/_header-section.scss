@@ -1,7 +1,6 @@
 .header-section {
   width: 100%;
   height: 56.2rem;
-  // background: url('../img/main-bg-xs.jpg'), 50% / cover no-repeat;
 
   @media (min-width: 1024px) {
     height: 65rem;
@@ -31,11 +30,8 @@
     }
 
     @media (min-width: 1400px) {
-      // width: 100%;
       margin: 19.6rem 0 0 0;
       left: 7rem;
-      // position: absolute;
-      // z-index: 20;
     }
   }
 
@@ -92,21 +88,15 @@
     }
 
     &-item {
+      display: none;
 
-      &:not(:last-of-type) {
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: "";
-          width: 0.1rem;
-          height: 7rem;
-          right: -4rem;
-          top: 50%;
-          transform: translateY(-50%);
-          background: #828282;
-        }
+      &:first-of-type {
+        display: block;
       }
+    }
+
+    &-form {
+      display: block;
     }
   }
 
@@ -117,7 +107,7 @@
     font-size: 2rem;
     line-height: normal;
     position: relative;
-    cursor: pointer;
+    // cursor: pointer;
 
     &::after {
       position: absolute;
@@ -132,115 +122,6 @@
       display: inline-block;
     }
   }
-
-  .menu-item__info {
-    color: #828282;
-    @include GilroyMedium();
-    font-size: 1.8rem;
-    line-height: normal;
-  }
-
-  // .slider-bg {
-  //   overflow: hidden;
-  //   width: 100%;
-  //   height: 66rem;
-  //   position: relative;
-
-  //   @media (min-width: 1200px) {
-  //     height: 80rem;
-  //   }
-
-  //   @media (min-width: 1400px) {
-  //     height: 85rem;
-  //   }
-  // }
-
-  // .slider-bg .slide {
-  //   position: absolute;
-  //   // top: 0;
-  //   bottom: 10.5rem;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   animation: slide 12.5s infinite;
-  //  }
-
-  // .slider-bg .slide:nth-child(1) {
-  //   background: url('../img/main-bg-xs.jpg');
-  //   animation-delay: 0;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-
-  //   @media (min-width: 900px) {
-  //     background: url('../img/main-bg-md.jpg');
-  //   }
-
-  //   @media (min-width: 1200px) {
-  //     background: url('../img/main-bg.jpg');
-  //   }
-  // }
-  
-  // .slider-bg .slide:nth-child(2) {
-  //   background: url('../img/main-bg-xs.jpg');
-  //   animation-delay: -2.5s;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-
-  //   @media (min-width: 900px) {
-  //     background: url('../img/main-bg-md.jpg');
-  //   }
-
-  //   @media (min-width: 1200px) {
-  //     background: url('../img/main-bg.jpg');
-  //   }
-  // }
-  
-  // .slider-bg .slide:nth-child(3) {
-  //   background: url('../img/main-bg-xs.jpg');
-  //   animation-delay: -5s;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-
-  //   @media (min-width: 900px) {
-  //     background: url('../img/main-bg-md.jpg');
-  //   }
-
-  //   @media (min-width: 1200px) {
-  //     background: url('../img/main-bg.jpg');
-  //   }
-  // }
-
-  // .slider-bg .slide:nth-child(4) {
-  //   background: url('../img/main-bg-xs.jpg');
-  //   animation-delay: -7.5s;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-
-  //   @media (min-width: 900px) {
-  //     background: url('../img/main-bg-md.jpg');
-  //   }
-
-  //   @media (min-width: 1200px) {
-  //     background: url('../img/main-bg.jpg');
-  //   }
-  // }
-  
-  // .slider-bg .slide:nth-child(5) {
-  //   background: url('../img/main-bg-xs.jpg');
-  //   animation-delay: -10s;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-
-  //   @media (min-width: 900px) {
-  //     background: url('../img/main-bg-md.jpg');
-  //   }
-
-  //   @media (min-width: 1200px) {
-  //     background: url('../img/main-bg.jpg');
-  //   }
-  // }
 
   .btn--long-mobile {
     display: block;
@@ -323,9 +204,6 @@
     position: relative;
     width: 100% !important;
     height: 52.6rem !important;
-    // width: 20rem !important;
-    // height: 22rem !important;
-    // border-radius: 2.5rem;
 
     @media (min-width: 1024px) {
       height: 65rem !important;
@@ -338,16 +216,6 @@
     @media (min-width: 1400px) {
       height: 85rem !important;
     }
-
-    // @media (min-width: 1024px) {
-    //   width: 25rem !important;
-    //   height: 27rem !important;
-    // }
-
-    // @media (min-width: 1400px) {
-    //   width: 33.5rem !important;
-    //   height: 36rem !important;
-    // }
 
     img {
       width: 100vw !important;
@@ -365,30 +233,6 @@
   
 }
 
-// .slider-bg__pagination {
-//   width: 4.8rem;
-//   position: absolute;
-//   bottom: 14rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   display: flex;
-//   justify-content: space-between;
-
-//   .bullet {
-//     background: #E0E0E0;
-//     width: 0.6rem;
-//     height: 0.6rem;
-//     border-radius: 50%;
-//     cursor: pointer;
-
-//     &--active {
-//       width: 1.2rem;
-//       background: #FFF;
-//       border-radius: 2.5rem;
-//     }
-//   }
-// }
-
 .header-section__form {
 
   input {
@@ -400,17 +244,75 @@
   }
 }
 
-// @keyframes slide {
-//   0%, 15%, 100% {
-//     transform: translateX(0);
-//     animation-timing-function: ease;
-//   }
-//   20% {
-//     transform: translateX(-100%);
-//     animation-timing-function: step-end;
-//   }
-//   95% {
-//     transform: translateX(100%);
-//     animation-timing-function: ease;
-//   }
+.select {
+  display: block;
+  max-width: 21.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.new-select {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  color: #828282;
+  @include GilroyMedium();
+  font-size: 1.8rem;
+  line-height: normal;
+}
+
+.new-select__list {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  cursor: pointer;
+  width: 24rem;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  user-select: none;
+}
+
+.new-select__list.on {
+  display: block;
+}
+
+.new-select__item {
+  background: #E0E0E0;
+}
+
+.new-select__item span {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: #E0E0E0;
+}
+
+.menu-item__title::before {
+  position: absolute;
+  content: "";
+  width: 0.1rem;
+  height: 7rem;
+  right: -4rem;
+  top: -1rem;
+  background: #828282;
+}
+
+.menu-item__title::after {
+  position: absolute;
+  content: "";
+  top: -0.8rem;
+  width: 1rem;
+  height: 1rem;
+  border-top: 0.2rem solid #C63235;
+  border-right: 0.2rem solid #C63235;
+  margin: 1.6rem 0 0 1rem;
+  transform: rotate(135deg);
+  display: inline-block;
+  transition: all .27s ease-in-out;
+  transform: rotate(135deg);
+}
+
+.menu-item__title.on::after {
+  transform: rotate(315deg);
+  top: -0.3rem;
+}
 }

@@ -13,18 +13,30 @@
       .header-section__content 
         h1.header-section__title Все виды услуг
         p.header-section__subtitle Мы выполняем полный спектр услуг, будь то простое обслуживание автомобиля, до сложного ремонта всех узлов.
-        .header-section__menu
-          .header-section__menu-item 
-            p.menu-item__title  Выберите адрес
-            p.menu-item__info  ул. Автозаводская, д. 16
-          .header-section__menu-item 
-            p.menu-item__title  Выберите дату
-            p.menu-item__info Четверг 19
-          .header-section__menu-item 
-            p.menu-item__title  Выберите время
-            p.menu-item__info 12:00
-          .header-section__menu-item
-            form.header-section__form
+        form.header-section__menu
+          .header-section__menu-list
+            p.menu-item__title Выберите адрес
+            select.select(name="adress")
+              option(value="" selected disabled hidden) ул. Автозаводская, д. 16
+              option(value="ул. Автозаводская, д. 16") ул. Автозаводская, д. 16
+              option(value="ул. Автозаводская, д. 16") ул. Автозаводская, д. 17
+              option(value="ул. Автозаводская, д. 16") ул. Автозаводская, д. 18
+          .header-section__menu-list
+            p.menu-item__title Выберите дату
+            select.select(name="date")
+              option(value="" selected disabled hidden) Четверг 19
+              option(value="Четверг 19") Четверг 19
+              option(value="Четверг 20") Четверг 20
+              option(value="Четверг 21") Четверг 21
+          .header-section__menu-list
+            p.menu-item__title Выберите время
+            select.select(name="time")
+              option(value="" selected disabled hidden) 12:00
+              option(value="12:00") 12:00
+              option(value="13:00") 13:00
+              option(value="14:00") 14:00
+          .header-section__menu-item.header-section__menu-form
+            .header-section__form
               input(type="text" name="header-form" placeholder="Укажите номер телефона")
               button.btn.btn--long Записаться
         button.btn.btn--long.btn--long-mobile Записаться

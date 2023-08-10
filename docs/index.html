@@ -80,26 +80,41 @@
             <div class="header-section__content"> 
               <h1 class="header-section__title">Все виды услуг</h1>
               <p class="header-section__subtitle">Мы выполняем полный спектр услуг, будь то простое обслуживание автомобиля, до сложного ремонта всех узлов.</p>
-              <div class="header-section__menu">
-                <div class="header-section__menu-item"> 
-                  <p class="menu-item__title"> Выберите адрес</p>
-                  <p class="menu-item__info"> ул. Автозаводская, д. 16</p>
+              <form class="header-section__menu">
+                <div class="header-section__menu-list">
+                  <p class="menu-item__title">Выберите адрес</p>
+                  <select class="select" name="adress">
+                    <option value="" selected="selected" disabled="disabled" hidden>ул. Автозаводская, д. 16</option>
+                    <option value="ул. Автозаводская, д. 16">ул. Автозаводская, д. 16</option>
+                    <option value="ул. Автозаводская, д. 16">ул. Автозаводская, д. 17</option>
+                    <option value="ул. Автозаводская, д. 16">ул. Автозаводская, д. 18</option>
+                  </select>
                 </div>
-                <div class="header-section__menu-item"> 
-                  <p class="menu-item__title"> Выберите дату</p>
-                  <p class="menu-item__info">Четверг 19</p>
+                <div class="header-section__menu-list">
+                  <p class="menu-item__title">Выберите дату</p>
+                  <select class="select" name="date">
+                    <option value="" selected="selected" disabled="disabled" hidden>Четверг 19</option>
+                    <option value="Четверг 19">Четверг 19</option>
+                    <option value="Четверг 20">Четверг 20</option>
+                    <option value="Четверг 21">Четверг 21</option>
+                  </select>
                 </div>
-                <div class="header-section__menu-item"> 
-                  <p class="menu-item__title"> Выберите время</p>
-                  <p class="menu-item__info">12:00</p>
+                <div class="header-section__menu-list">
+                  <p class="menu-item__title">Выберите время</p>
+                  <select class="select" name="time">
+                    <option value="" selected="selected" disabled="disabled" hidden>12:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                  </select>
                 </div>
-                <div class="header-section__menu-item">
-                  <form class="header-section__form">
+                <div class="header-section__menu-item header-section__menu-form">
+                  <div class="header-section__form">
                     <input type="text" name="header-form" placeholder="Укажите номер телефона">
                     <button class="btn btn--long">Записаться</button>
-                  </form>
+                  </div>
                 </div>
-              </div>
+              </form>
               <button class="btn btn--long btn--long-mobile">Записаться</button>
             </div>
           </div>
