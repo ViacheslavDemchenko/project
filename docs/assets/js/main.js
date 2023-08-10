@@ -4740,17 +4740,18 @@ function slider() {
   if (document.querySelector('.slider-first')) {
     var aboutSlider = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.slider-first', {
       spaceBetween: 20,
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       loopedSlides: 1,
       autoHeight: true,
-      // loop: true,
+      loop: true,
+      grabCursor: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
       },
       breakpoints: {
-        320: {
-          slidesPerView: 1.2,
+        1200: {
+          slidesPerView: 4,
           loopedSlides: 1,
           spaceBetween: 20
         }
@@ -4776,16 +4777,18 @@ function slider() {
   if (document.querySelector('.slider-second')) {
     var _aboutSlider = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.slider-second', {
       spaceBetween: 20,
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       loopedSlides: 1,
       autoHeight: true,
+      loop: true,
+      grabCursor: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
       },
       breakpoints: {
-        320: {
-          slidesPerView: 1.2,
+        1200: {
+          slidesPerView: 4,
           loopedSlides: 1,
           spaceBetween: 20
         }
@@ -4811,16 +4814,18 @@ function slider() {
   if (document.querySelector('.slider-third')) {
     var _aboutSlider2 = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.slider-third', {
       spaceBetween: 20,
-      slidesPerView: 4,
+      slidesPerView: 1.2,
       loopedSlides: 1,
       autoHeight: true,
+      loop: true,
+      grabCursor: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
       },
       breakpoints: {
         320: {
-          slidesPerView: 1.2,
+          slidesPerView: 4,
           loopedSlides: 1,
           spaceBetween: 20
         }
@@ -4844,12 +4849,16 @@ function slider() {
   }
 
   if (document.querySelector('.slider-main')) {
-    var _aboutSlider3 = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.slider-main', {
+    var bgSlider = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.slider-main', {
       spaceBetween: 0,
       slidesPerView: 1,
       loopedSlides: 1,
       autoHeight: true,
       loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
